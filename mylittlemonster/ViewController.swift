@@ -23,6 +23,9 @@ class ViewController: UIViewController {
     
     var currentPenalties = 0
     var timer: NSTimer!
+    var monsterHappy = false
+    var currentItem: UInt32 = 0 // the item that the monster desires
+    
     
     
     override func viewDidLoad() {
@@ -42,10 +45,18 @@ class ViewController: UIViewController {
     }
     
     func itemDroppedOnCharacter(notif: AnyObject) {
-        print("Item dropped on character")
+    
+        monsterHappy = true
+        startTimer()
+        
+        foodImg.alpha = DIM_ALPHA
+        foodImg.userInteractionEnabled = false
+        heartImg.alpha = DIM_ALPHA
+        heartImg.userInteractionEnabled = false
     }
     
     func startTimer() {
+        
         if timer != nil {
             timer.invalidate()
         }
@@ -56,29 +67,52 @@ class ViewController: UIViewController {
     
     func changeGameState() {
         
-        currentPenalties += 1
-        
-        if currentPenalties == 1 {
-            skullPenalty1Img.alpha = OPAQUE
-            skullPenalty2Img.alpha = DIM_ALPHA
-        
-        } else if currentPenalties == 2 {
-            skullPenalty2Img.alpha = OPAQUE
-            skullPenalty3Img.alpha = DIM_ALPHA
-        
-        } else if currentPenalties <= 3 {
-            skullPenalty3Img.alpha = OPAQUE
+        if !monsterHappy {
             
-        } else {            // just safety
-            skullPenalty1Img.alpha = DIM_ALPHA
-            skullPenalty2Img.alpha = DIM_ALPHA
-            skullPenalty3Img.alpha = DIM_ALPHA
+            currentPenalties += 1
             
+            if currentPenalties == 1 {
+                skullPenalty1Img.alpha = OPAQUE
+                skullPenalty2Img.alpha = DIM_ALPHA
+            
+            } else if currentPenalties == 2 {
+                skullPenalty2Img.alpha = OPAQUE
+                skullPenalty3Img.alpha = DIM_ALPHA
+            
+            } else if currentPenalties <= 3 {
+                skullPenalty3Img.alpha = OPAQUE
+                
+            } else {            // just safety
+                skullPenalty1Img.alpha = DIM_ALPHA
+                skullPenalty2Img.alpha = DIM_ALPHA
+                skullPenalty3Img.alpha = DIM_ALPHA
+                
+            }
+            
+            
+            if currentPenalties >= MAX_PENALTIES {
+                gameOver()
+            }
         }
         
-        if currentPenalties >= MAX_PENALTIES {
-            gameOver()
+        let rand = arc4random_uniform(2)
+        
+        if rand == 0 {
+            foodImg.alpha = DIM_ALPHA
+            foodImg.userInteractionEnabled = false
+            
+            heartImg.alpha = OPAQUE
+            heartImg.userInteractionEnabled = true
+        } else {
+            heartImg.alpha = DIM_ALPHA
+            heartImg.userInteractionEnabled = false
+            
+            foodImg.alpha = OPAQUE
+            foodImg.userInteractionEnabled = true
         }
+        
+        currentItem = rand
+        monsterHappy = false
     }
     
     func gameOver() {
