@@ -12,6 +12,11 @@
 		0B25574A1D305F45003CD5C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2557481D305F45003CD5C0 /* Main.storyboard */; };
 		0B25574C1D305F45003CD5C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B25574B1D305F45003CD5C0 /* Assets.xcassets */; };
 		0B25574F1D305F45003CD5C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B25574D1D305F45003CD5C0 /* LaunchScreen.storyboard */; };
+		0B95CB181D498BEC006D7F57 /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B95CB171D498BEC006D7F57 /* cave-music.mp3 */; };
+		0B95CB1A1D498C1A006D7F57 /* biteSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B95CB191D498C1A006D7F57 /* biteSound.wav */; };
+		0B95CB1C1D498C2C006D7F57 /* heartSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B95CB1B1D498C2C006D7F57 /* heartSound.wav */; };
+		0B95CB1E1D498C38006D7F57 /* deathSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B95CB1D1D498C38006D7F57 /* deathSound.wav */; };
+		0B95CB201D498C42006D7F57 /* skullSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B95CB1F1D498C42006D7F57 /* skullSound.wav */; };
 		0BE4639E1D340B27007CCF83 /* DragImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4639D1D340B27007CCF83 /* DragImg.swift */; };
 		0BE463A01D343FF3007CCF83 /* MonsterImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4639F1D343FF3007CCF83 /* MonsterImg.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +29,11 @@
 		0B25574B1D305F45003CD5C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B25574E1D305F45003CD5C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B2557501D305F45003CD5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B95CB171D498BEC006D7F57 /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "cave-music.mp3"; path = "Assets.xcassets/cave-music.dataset/cave-music.mp3"; sourceTree = "<group>"; };
+		0B95CB191D498C1A006D7F57 /* biteSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = biteSound.wav; path = Assets.xcassets/bite.dataset/biteSound.wav; sourceTree = "<group>"; };
+		0B95CB1B1D498C2C006D7F57 /* heartSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = heartSound.wav; path = Assets.xcassets/heart.dataset/heartSound.wav; sourceTree = "<group>"; };
+		0B95CB1D1D498C38006D7F57 /* deathSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = deathSound.wav; path = Assets.xcassets/death.dataset/deathSound.wav; sourceTree = "<group>"; };
+		0B95CB1F1D498C42006D7F57 /* skullSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = skullSound.wav; path = Assets.xcassets/skull.dataset/skullSound.wav; sourceTree = "<group>"; };
 		0BE4639D1D340B27007CCF83 /* DragImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImg.swift; sourceTree = "<group>"; };
 		0BE4639F1D343FF3007CCF83 /* MonsterImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +68,11 @@
 		0B2557431D305F45003CD5C0 /* mylittlemonster */ = {
 			isa = PBXGroup;
 			children = (
+				0B95CB171D498BEC006D7F57 /* cave-music.mp3 */,
+				0B95CB1B1D498C2C006D7F57 /* heartSound.wav */,
+				0B95CB1D1D498C38006D7F57 /* deathSound.wav */,
+				0B95CB1F1D498C42006D7F57 /* skullSound.wav */,
+				0B95CB191D498C1A006D7F57 /* biteSound.wav */,
 				0B2557441D305F45003CD5C0 /* AppDelegate.swift */,
 				0B2557461D305F45003CD5C0 /* ViewController.swift */,
 				0B2557481D305F45003CD5C0 /* Main.storyboard */,
@@ -128,8 +143,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B95CB201D498C42006D7F57 /* skullSound.wav in Resources */,
+				0B95CB1A1D498C1A006D7F57 /* biteSound.wav in Resources */,
+				0B95CB1C1D498C2C006D7F57 /* heartSound.wav in Resources */,
 				0B25574F1D305F45003CD5C0 /* LaunchScreen.storyboard in Resources */,
+				0B95CB181D498BEC006D7F57 /* cave-music.mp3 in Resources */,
 				0B25574C1D305F45003CD5C0 /* Assets.xcassets in Resources */,
+				0B95CB1E1D498C38006D7F57 /* deathSound.wav in Resources */,
 				0B25574A1D305F45003CD5C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
