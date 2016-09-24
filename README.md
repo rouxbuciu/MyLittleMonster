@@ -1,1 +1,1 @@
-# mylittlemonster_udemy_app
+Random Tomagochi-ish clone
